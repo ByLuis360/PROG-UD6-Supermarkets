@@ -6,9 +6,9 @@ public class Cliente {
     private String nombre;
     private Stack<String> cestaDeLaCompra = new Stack<>();
 
-
-    public Cliente(String nombre) {
+    public Cliente(String nombre, Stack<String> cestaDeLaCompra) {
         this.nombre = Tienda.personaAleatoria();
+        this.cestaDeLaCompra = añadirProductosACesta();
     }
 
     public String getNombre() {
@@ -32,10 +32,11 @@ public class Cliente {
         return espacioTotal;
     }
 
-    public void añadirProductosACesta() {
+    public Stack<String> añadirProductosACesta() {
         for (int i = 0; i < productosTotalesEnLaCesta(); i++) {
             this.cestaDeLaCompra.add(Tienda.productoAleatorio());
         }
+        return this.cestaDeLaCompra;
     }
 
     @Override
