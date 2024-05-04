@@ -66,13 +66,15 @@ public class Cajero {
         }
     }
 
-    public void cerrarSupermercado() {
+    public boolean cerrarSupermercado() {
         if (filaClientes.isEmpty()) {
             cajaAbierta = false;
             System.out.println("La caja está cerrada y el mercadona también cierra por hoy hasta pornto!");
+            return false;
         } else {
             System.out.println(
                     "No se puede cerrar la caja hasta que no termines de atender a todos los clientes, anda espabila que la vida te va a coméh");
+            return true;
         }
     }
 
