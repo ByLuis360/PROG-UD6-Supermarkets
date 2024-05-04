@@ -83,6 +83,7 @@ public class Cajero {
         for (Cliente listaDeClientes : filaClientes) {
             mensaje += "\t" + listaDeClientes.getNombre() + "\n";
         }
+        mensaje += "\n===================================\n";
         if (filaClientes.isEmpty()) {
             System.out.println("No quedan clientes pendientes");
         }
