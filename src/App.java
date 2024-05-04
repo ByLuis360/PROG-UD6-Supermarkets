@@ -27,13 +27,13 @@ public class App {
                     System.out.println(caja);
                     break;
                 case "5":
-
+                    seguirPreguntando = caja.cerrarSupermercado();
                     break;
 
                 default:
                     break;
             }
         }
-
+        scanner.close();
     }
 }
